@@ -32,7 +32,7 @@ jobs:
           git clone --depth=1 -b "$BRANCH" "$REPO" openwrt
           cd openwrt
           # 额外 feed：iStore / QModem / OpenClash
-          echo "src-git istore https://github.com/linkease/istore;master" >> feeds.conf.default
+          echo "src-git istore https://github.com/istoreos/istore;main" >> feeds.conf.default
           echo "src-git qmodem https://github.com/FUjr/modem_feeds.git;main" >> feeds.conf.default
           echo "src-git openclash https://github.com/vernesong/OpenClash.git;master" >> feeds.conf.default
           ./scripts/feeds update -a
