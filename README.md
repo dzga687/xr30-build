@@ -1,6 +1,6 @@
 # 「 自编译XR30」固件 — 编译包（padavanonly 6.6 底座）
 
-目标：在 **padavanonly/immortalwrt-mt798x-6.6**（ImmortalWrt 24.10，内核 **6.6** + MTK mtwifi 原厂闭源驱动 mt7915_mtwifi）上，为 **CMCC XR30 NAND** 编译一份固件，并复刻冰奇固件特性：
+目标：在 **padavanonly/immortalwrt-mt798x-6.6**（ImmortalWrt 24.10，内核 **6.6** + MTK mtwifi 原厂闭源驱动 mt7915_mtwifi）上，为 **CMCC XR30 NAND** 编译一份固件：
 
 - MTK **mtwifi 闭源驱动**（**不是** mt76 开源），专治 `NOT_ROBUST_UNICAST_FRAME` 中继断流（已通过 rc.local + hotplug 固化 PMF 关闭补丁）
 - 预置 **iStore**、**无线中继面板**（luci-app-mtk / WISP）、**USB RNDIS/NCM/QMI 4G 上网**
