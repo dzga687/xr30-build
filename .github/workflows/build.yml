@@ -42,7 +42,8 @@ jobs:
         run: |
           cd openwrt
           cp ../xr30-nand-mtwifi.config .config
-          ../diy-part2.sh
+          chmod +x ../diy-part2.sh
+          bash ../diy-part2.sh
           make defconfig
 
       - name: Download packages
