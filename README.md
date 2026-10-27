@@ -1,4 +1,4 @@
-# 复刻「冰奇 XR30 (XR30d)」固件 — 编译包（padavanonly 6.6 底座）
+# 「 自编译XR30」固件 — 编译包（padavanonly 6.6 底座）
 
 目标：在 **padavanonly/immortalwrt-mt798x-6.6**（ImmortalWrt 24.10，内核 **6.6** + MTK mtwifi 原厂闭源驱动 mt7915_mtwifi）上，为 **CMCC XR30 NAND** 编译一份固件，并复刻冰奇固件特性：
 
@@ -14,7 +14,7 @@
 - **U-Boot 必须是 ubootmod / H 大 fixed-parts 布局**（bl-mt798x-xr30）。原厂 stock 布局请改用对应的 stock 镜像，本包按 ubootmod 产出。
 - padavanonly 6.6 **已原生合入 `cmcc_xr30-nand`**，无需任何第三方 fork 或设备树补丁。
 
-## 关于「冰奇 PMF 补丁」
+## 关于「 PMF 补丁」
 mtwifi 没有能"永久关 PMF"的 menuconfig 开关。`diy-part2.sh` 用 `files/` 覆盖层在 `rc.local`（开机）和 `hotplug.d/iface`（apcli0/apcli1 up 时）自动执行：
 ```
 iwpriv apcli0 set PMFMFPC=0
